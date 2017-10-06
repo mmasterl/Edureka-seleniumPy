@@ -8,7 +8,8 @@ from selenium.webdriver.common.keys import Keys
 class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Firefox(executable_path="/Users/markomasterl/Downloads/webdrivers/firefox/geckodriver")
+        #        self.driver = webdriver.Firefox(executable_path="/Users/markomasterl/Library/Selenium/WebDriver/firefox/geckodriver")
+        self.driver = webdriver.Chrome(executable_path="/Users/markomasterl/Library/Selenium/WebDriver/chrome/chromedriver")
 
     # test case method
     def test_search_in_python_org(self):

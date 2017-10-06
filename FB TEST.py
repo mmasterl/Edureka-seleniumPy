@@ -1,14 +1,14 @@
 from selenium import webdriver
 
 from selenium.webdriver.support.ui import WebDriverWait
-import time
 import unittest
 
 class LoginTest(unittest.TestCase):
 
     def setUp(self):
 
-        self.driver = webdriver.Firefox(executable_path="/Users/markomasterl/Downloads/webdrivers/firefox/geckodriver")
+#        self.driver = webdriver.Firefox(executable_path="/Users/markomasterl/Library/Selenium/WebDriver/firefox/geckodriver")
+        self.driver = webdriver.Chrome(executable_path="/Users/markomasterl/Library/Selenium/WebDriver/chrome/chromedriver")
         self.driver.get("https://www.facebook.com/")
         self.driver.maximize_window()
 
@@ -34,3 +34,5 @@ class LoginTest(unittest.TestCase):
         passFieldElement.send_keys(facebookPassword)
         loginButtonElement.click()
         WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath(fbLogoXpath))
+
+        driver.quit()

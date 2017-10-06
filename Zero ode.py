@@ -2,7 +2,8 @@ from selenium import webdriver
 
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Firefox(executable_path="/Users/markomasterl/Downloads/webdrivers/firefox/geckodriver")
+#driver = webdriver.Firefox(executable_path="/Users/markomasterl/Library/Selenium/WebDriver/firefox/geckodriver")
+driver = webdriver.Chrome(executable_path="/Users/markomasterl/Library/Selenium/WebDriver/chrome/chromedriver")
 
 driver.get("http://www.python.org")
 
